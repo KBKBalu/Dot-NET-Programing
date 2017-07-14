@@ -1,0 +1,52 @@
+
+// CRUD Operation on SQL Server
+
+--create database session
+
+--Alter database session Modify Name =test_db
+
+--drop database new_db
+
+--create table student(id int not null primary key, name nvarchar(100), address nvarchar(50))
+
+--insert into student(age) values(6,'Shruthi','Che') 
+
+--select * from student
+
+--alter table student add  mobile int
+
+--ALTER TABLE student ADD CONSTRAINT CK_student_Age CHECK (Age > 0 AND Age < 150)
+
+--update  student set mobile=1234567891 where id=6
+
+--alter table student drop column mobile
+
+--DELETE FROM student WHERE age=22;
+
+
+// Another Table Creation
+
+
+--Create Table Employee(PersonId int Identity(1,1) Primary Key,Name nvarchar(20),Address varchar(50))
+
+--select * from employee
+
+--insert into employee values('Krishna','Ban')
+
+--alter table employee add  mobile int
+
+--drop table employee 
+
+--DELETE FROM employee WHERE Address='hyd';
+
+--truncate table employee
+
+--Select SCOPE_IDENTITY()
+
+--Select @@IDENTITY
+
+--Select IDENT_CURRENT('employee')
+
+
+
+
