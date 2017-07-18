@@ -1,0 +1,42 @@
+--select * from Employee
+--select * from student
+
+--procedure2 10,'Balu','AMGL'
+
+
+create proc procedure2(
+@id INT,
+@name varchar(50),
+@address nvarchar(23) out
+)
+AS
+Begin
+
+--Select * from Employee where PersonId=@id or name=@name or address=@address
+insert into Employee(PersonId,name,address) values(@id,@name,@address)
+Select * from Employee
+
+End
+
+ --{
+ --select * from student
+
+  --SET IDENTITY_INSERT Employee ON
+
+ --update student set age=29 where id=8
+ --update student set age=24 where id in(7,8,9)
+
+ --delete from student where id between 10 and 12
+
+ --delete from student where id=0
+
+ --delete from student where id in(10,11,12,13,14,15,16,17)
+
+ --Select * From INFORMATION_SCHEMA.COLUMNS Where TABLE_NAME = 'student'
+
+ --Drop proc procedure2
+
+ --execute procedure2 17,'ccc'
+
+ --insert into student values(6,'Shruthi',22,123456789)
+  --}
