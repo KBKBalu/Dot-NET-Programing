@@ -3,30 +3,30 @@ SELECT * FROM EMPTBL
 SELECT * FROM EMP_DETAILS
 
 
---Inner Join/Join Concept in Tables
+1) --Inner Join/Join Concept in Tables
 SELECT ED.STATE,ED.CITY FROM EMP_DETAILS ED
 JOIN EMPTBL EMP ON ED.EMPID=EMP.ID 
 WHERE EMP.SALARY < 20000
 
 
---Left Join/Left Outer Join Concept in Tables
+2) --Left Join/Left Outer Join Concept in Tables
 SELECT Emp.NAME, ED.STATE,ED.CITY FROM EMP_DETAILS ED
 Left JOIN EMPTBL EMP ON ED.EMPID=EMP.ID 
 WHERE EMP.SALARY = 20000
 
 
---Right Join/Right Outer Join Concept in Tables
+3) --Right Join/Right Outer Join Concept in Tables
 SELECT Emp.NAME, Emp.EMAIL ,ED.STATE FROM EMPTBL EMP
 RIGHT JOIN EMP_DETAILS ED ON EMP.ID =ED.EMPID
 
 
---Full Join/Full Outer Join Concept in Tables
+4) --Full Join/Full Outer Join Concept in Tables
 SELECT Emp.NAME, Emp.EMAIL ,ED.STATE FROM EMPTBL EMP
 Full JOIN EMP_DETAILS ED ON EMP.ID =ED.EMPID
 
 
 
---Cross Join Concept in Tables
+5) --Cross Join Concept in Tables
 Select  *  from EMPTBL  cross  join EMP_DETAILS
 
 --SELECT Emp.NAME, Emp.EMAIL ,ED.STATE FROM EMPTBL EMP  // Cross Join wont Accept Conditions
