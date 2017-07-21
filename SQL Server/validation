@@ -1,0 +1,9 @@
+if exists(select ID from EMPTBL WHERE EMAIL=@Email)
+		BEGIN
+		PRINT 'Email already exists'
+			
+		END
+	ELSE
+		BEGIN
+		insert into EMPTBL (NAME,EMAIL,SALARY) VALUES(@Name,@Email,@Salary)	
+		END
