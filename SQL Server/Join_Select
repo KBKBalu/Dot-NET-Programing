@@ -1,0 +1,46 @@
+
+
+--To Rename Column names
+sp_rename 'Employee.Position', 'DESIGNATION', 'COLUMN'
+sp_rename 'student.MOBILE', 'MOBILE', 'COLUMN'
+
+--To Rename Table names
+sp_rename '', 'STUDENT';
+
+
+--To Drop column in table
+ALTER TABLE student DROP COLUMN Name;
+
+
+select * from EMPLOYEE
+select * from EMP_INFO
+
+
+--Inner Join/Join Conept
+SELECT EMP.NAME,EMP.ADDRESS from Employee EMP 
+INNER JOIN EMP_INFO EI
+ON EMP.ID = EI.EID
+
+
+
+
+--Left Join/Left Outer Join Concept
+SELECT EMP.NAME,EMP.ADDRESS,EMP.Designation from Employee EMP 
+Left JOIN EMP_INFO EI
+ON EMP.ID = EI.EID
+
+
+--Right Join/Right Outer Join Concept
+SELECT EMP.NAME,EMP.Designation,EI.Salary from Employee EMP 
+Right JOIN EMP_INFO EI
+ON EMP.ID = EI.EID
+
+
+--Full Join/Full Outer Join Concept
+SELECT EMP.NAME,EMP.ADDRESS,EMP.Designation,EI.Country,EI.Salary from Employee EMP 
+Full JOIN EMP_INFO EI
+ON EMP.ID = EI.EID
+
+
+--Cross Join/Cross Join Concept
+Select  *  from Employee  cross  join Emp_Info
