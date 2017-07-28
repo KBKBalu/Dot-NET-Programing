@@ -1,0 +1,31 @@
+// Tables Data
+
+SELECT * FROM STUDENT
+SELECT * FROM SCHOOL
+SELECT * FROM STATIONARY
+
+// Aggregate functions
+
+SELECT AVG(fees) FROM STUDENT
+SELECT AVG(cost) FROM stationary
+
+SELECT sum(fees) FROM STUDENT
+SELECT sum(cost) FROM stationary
+
+SELECT min(fees) FROM STUDENT
+SELECT min(cost) FROM stationary
+
+SELECT max(fees) FROM STUDENT
+SELECT max(cost) FROM stationary
+
+SELECT min(id) FROM STUDENT
+SELECT min(id) FROM school
+SELECT min(ID) FROM stationary
+
+SELECT max(id) FROM STUDENT
+SELECT max(id) FROM school
+SELECT max(ID) FROM stationary
+
+SELECT count(*) FROM STUDENT
+SELECT COUNT(id) FROM school
+SELECT COUNT(cost) FROM stationary
