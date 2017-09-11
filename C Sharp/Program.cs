@@ -1,33 +1,53 @@
 ﻿using System;
-namespace CalculatorApplication
+namespace OopsConcept
 {
     class Program
     {
-      static void Main(string[] args)
+        void language()
         {
-            //from string literal and string concatenation
-            string fname, lname;
-            fname = "Balu";
-            lname = "KBK Goud";
-
-            string fullname = fname + lname;
-            Console.WriteLine("Full Name: {0}", fullname);
-
-            //by using string constructor
-            char[] letters = { 'H', 'e', 'l', 'l', 'o' };
-            string greetings = new string(letters);
-            Console.WriteLine("Greetings: {0}", greetings);
-
-            //methods returning string
-            string[] sarray = { "Hello", "From", "Bala", "Krishna" };
-            string message = String.Join(" ", sarray);
-            Console.WriteLine("Message: {0}", message);
-
-            //formatting method to convert a value
-            DateTime waiting = new DateTime(2012, 10, 10, 17, 58, 1);
-            string chat = String.Format("Message sent at {0:t} on {0:D}", waiting);
-            Console.WriteLine("Message: {0}", chat);
-            Console.ReadKey();
+            char a='c#';
+            string b = 'java';
+            string c = 'DotNet';
+            Console.WriteLine(c);
         }
+        void emp()
+        {
+            int id = 111;
+            string name = 'KBK';
+            Console.WriteLine(name);
+        }
+    }
+
+    class Details : Program
+    {
+        void address()
+        {
+            string city = 'HYD';
+            string dist = 'RR';
+            Console.WriteLine(city);
+        }
+        void company()
+        {
+            string c1 = 'Abhra';
+            string c2 = 'Techmo';
+            Console.WriteLine(c1);
+        }
+    }
+    static void Main(string[] args)
+    {
+       // Details d = new Details();
+        Details d = new Program();
+        d.emp();
+        d.language();
+        d.address();
+
+        // Program p = new Program();
+         Program p = new Details();
+        p.emp();
+        p.language();
+        p.address();
+        p.company();
+
+        Console.ReadKey();
     }
 }
